@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: cloud-gateway # 微服务的名称
+  profiles:
+    active: dev

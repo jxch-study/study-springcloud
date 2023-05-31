@@ -16,6 +16,7 @@
     <description>study-springcloud</description>
     <modules>
         <module>cloud-order</module>
+        <module>cloud-gateway</module>
     </modules>
     <properties>
         <java.version>20</java.version>
@@ -31,7 +32,6 @@
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
             <version>4.0.3</version>
         </dependency>
-
     </dependencies>
 
     <dependencyManagement>

@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848 # 配置中心的地址
+        namespace: 54fdd84f-44bb-45c1-b9c7-2b13bb4dca57
+        shared-configs:
+          - data-id: cloud-gateway.yml
+            group: DEFAULT_GROUP
+            refresh: true
