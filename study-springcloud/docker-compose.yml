@@ -1,5 +1,30 @@
 version: '3.8'
 services:
+  nacos:
+    image: nacos/nacos-server
+    restart: unless-stopped
+    environment:
+      - PREFER_HOST_MODE=hostname
+      - MODE=standalone
+    volumes:
+      - ./data/standalone-logs/:/home/nacos/logs
+    ports:
+      - "18848:8848"
+      - "19848:9848"
+  prometheus:
+    image: prom/prometheus:latest
+    restart: on-failure
+    volumes:
+      - ./prometheus-standalone.yaml:/etc/prometheus/prometheus.yml
+    ports:
+      - "19090:9090"
+    depends_on:
+      - nacos
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "13001:3000"
+    restart: on-failure
   db_w1:
     image: postgres
     restart: unless-stopped
