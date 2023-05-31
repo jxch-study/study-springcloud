@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cloud-order # 微服务的名称
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848 # 配置中心的地址
+        namespace: 54fdd84f-44bb-45c1-b9c7-2b13bb4dca57
+        shared-configs:
+          - data-id: cloud-order.yml
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: test.yml
+            group: DEFAULT_GROUP
+            refresh: true
+profiles:
+  active: dev
+

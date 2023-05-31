@@ -10,8 +10,8 @@ services:
       - ./data/nacos-data:/home/nacos/data
       - ./data/nacos-standalone-logs/:/home/nacos/logs
     ports:
-      - "18848:8848"
-      - "19848:9848"
+      - "8848:8848"
+      - "9848:9848"
   prometheus:
     image: prom/prometheus:latest
     restart: on-failure
