@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    w1:
+      url: jdbc:postgresql://localhost:55432/study
+      username: user
+      password: pw
+    r1:
+      url: jdbc:postgresql://localhost:55433/study
+      username: user
+      password: pw
+
+
+
