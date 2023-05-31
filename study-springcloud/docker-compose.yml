@@ -7,7 +7,8 @@ services:
       - PREFER_HOST_MODE=hostname
       - MODE=standalone
     volumes:
-      - ./data/standalone-logs/:/home/nacos/logs
+      - ./data/nacos-data:/home/nacos/data
+      - ./data/nacos-standalone-logs/:/home/nacos/logs
     ports:
       - "18848:8848"
       - "19848:9848"
