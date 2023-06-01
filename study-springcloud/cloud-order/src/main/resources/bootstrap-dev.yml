@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: cloud-order-dev # 微服务的名称
   cloud:
     nacos:
       config:
