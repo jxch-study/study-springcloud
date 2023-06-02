@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: 8a268cd5-2ff9-455e-9fdd-ce30ee712f78
+        shared-configs:
+          - data-id: cloud-auth-dev.yml
+            group: DEFAULT_GROUP
+            refresh: true

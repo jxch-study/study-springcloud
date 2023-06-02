@@ -17,6 +17,7 @@
     <modules>
         <module>cloud-order</module>
         <module>cloud-gateway</module>
+        <module>cloud-auth</module>
     </modules>
     <properties>
         <java.version>20</java.version>
