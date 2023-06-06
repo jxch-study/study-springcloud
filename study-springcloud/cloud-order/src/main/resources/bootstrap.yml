@@ -4,5 +4,13 @@ spring:
   profiles:
     active: dev
 
+  data:
+    mongodb:
+      uri: mongodb://order:order@localhost:27017/order
+
 rocksdb:
   path: E:\work\jxch-study\study-springcloud\study-springcloud\data\rockdb
+
+
+
+

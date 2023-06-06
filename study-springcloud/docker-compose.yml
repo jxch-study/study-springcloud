@@ -50,3 +50,13 @@ services:
       - POSTGRES_PASSWORD=pw
       - POSTGRES_USER=user
       - POSTGRES_DB=study
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pw
