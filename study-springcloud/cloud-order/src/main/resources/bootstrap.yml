@@ -4,3 +4,5 @@ spring:
   profiles:
     active: dev
 
+rocksdb:
+  path: E:\work\jxch-study\study-springcloud\study-springcloud\data\rockdb
