@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: cloud-order # 微服务的名称
+  profiles:
+    active: dev
+
+
