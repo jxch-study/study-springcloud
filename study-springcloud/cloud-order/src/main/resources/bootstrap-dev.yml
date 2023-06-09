@@ -8,3 +8,11 @@ spring:
           - data-id: cloud-order-dev.yml
             group: DEFAULT_GROUP
             refresh: true
+
+
+minio:
+  endpoint: http://localhost:9010
+  access-key: 6uajU1xXhYt1X3SvJnoo
+  secret-key: rePumpyhi8sHaLzqXtBzOHJZ0bUB3JOijhjZY6oX
+  bucket-name: order-bucket
+

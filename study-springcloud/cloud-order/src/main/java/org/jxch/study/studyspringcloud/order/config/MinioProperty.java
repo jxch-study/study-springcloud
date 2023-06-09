@@ -1,5 +1,4 @@
-package org.jxch.study.studyspringcloud.id.config;
-
+package org.jxch.study.studyspringcloud.order.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,11 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @Data
 @Builder
 @Accessors(chain = true)
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Configuration
-@ConfigurationProperties(prefix = "leaf")
-public class LeafProperties {
-    private String zkAddress;
-    private Integer zkPort;
+@ConfigurationProperties(prefix = "minio")
+public class MinioProperty {
+    private String endpoint;
+    private String accessKey;
+    private String secretKey;
+    private String bucketName;
 }

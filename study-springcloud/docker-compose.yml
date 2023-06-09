@@ -71,6 +71,7 @@ services:
     environment:
       ZOO_MY_ID: 1
       ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181 server.2=zoo2:2888:3888;2181
+      TZ: Asia/Shanghai
   zoo2:
     image: zookeeper
     hostname: zoo2
@@ -82,3 +83,28 @@ services:
     environment:
       ZOO_MY_ID: 2
       ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=0.0.0.0:2888:3888;2181
+      TZ: Asia/Shanghai
+  minio1:
+    image: minio/minio
+    ports:
+      - '9010:9000'
+      - '9011:9001'
+    environment:
+      - MINIO_ROOT_USER=root
+      - MINIO_ROOT_PASSWORD=minio123456789
+    volumes:
+      - './data/minio1-1:/data1'
+      - './data/minio1-2:/data2'
+    command: server --console-address ":9001" http://minio{1...2}/data{1...2}
+  minio2:
+    image: minio/minio
+    ports:
+      - '9020:9000'
+      - '9021:9001'
+    environment:
+      - MINIO_ROOT_USER=root
+      - MINIO_ROOT_PASSWORD=minio123456789
+    volumes:
+      - './data/minio2-1:/data1'
+      - './data/minio2-2:/data2'
+    command: server --console-address ":9001" http://minio{1...2}/data{1...2}

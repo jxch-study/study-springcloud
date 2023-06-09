@@ -1,8 +1,8 @@
 
 
 leaf:
-  zk-address: localhost
-  zk-port: 9999
-
-
+  snowflake:
+    enable: true
+    address: localhost
+    port: 2181
 
