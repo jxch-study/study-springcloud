@@ -19,6 +19,10 @@
         <module>cloud-gateway</module>
         <module>cloud-auth</module>
         <module>cloud-id</module>
+        <module>boot</module>
+        <module>boot/boot-core</module>
+        <module>boot/boot-app</module>
+        <module>boot/boot-bean</module>
     </modules>
     <properties>
         <java.version>20</java.version>
